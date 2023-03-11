@@ -31,17 +31,23 @@ const Header = () => (
     <Div2>
       <li>
         <Link href='#projects' passHref legacyBehavior>
-          <NavLink>Projects</NavLink>
+          <NavLink>
+            <span style={{ color: '#64ffda' }}>01.</span>Projects
+          </NavLink>
         </Link>
       </li>
       <li>
         <Link href='#about' passHref legacyBehavior>
-          <NavLink>About Me</NavLink>
+          <NavLink>
+            <span style={{ color: '#64ffda' }}>02.</span>About
+          </NavLink>
         </Link>
       </li>
       <li>
         <Link href='#contatct' passHref legacyBehavior>
-          <NavLink>Contact</NavLink>
+          <NavLink>
+            <span style={{ color: '#64ffda' }}>03.</span>Contact
+          </NavLink>
         </Link>
       </li>
     </Div2>
