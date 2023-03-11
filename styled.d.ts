@@ -17,6 +17,7 @@ interface IBreakpoints {
   md: string;
   lg: string;
   xl: string;
+  md_min: string;
 }
 
 declare module 'styled-components' {
