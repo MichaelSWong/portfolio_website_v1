@@ -1,23 +1,11 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
-import { DiCssdeck } from 'react-icons/di';
-import {
-  AiFillGithub,
-  AiFillInstagram,
-  AiFillLinkedin,
-  AiOutlineClose,
-} from 'react-icons/ai';
+import { AiOutlineClose } from 'react-icons/ai';
 import { BiMenuAltRight } from 'react-icons/bi';
-import {
-  Container,
-  Div1,
-  Div2,
-  Div3,
-  Div4,
-  NavLink,
-  SocialIcons,
-  Span,
-} from './HeaderStyles';
+import { Container, Div1, Div2, Div4, NavLink } from './HeaderStyles';
+import { SpanText } from '@/styles/GlobalComponents';
+import { navSections } from '@/constants/constants';
+import Logo from '@/styles/GlobalComponents/Logo';
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
@@ -33,44 +21,19 @@ const Header = () => {
             marginBottom: '20px',
           }}
         >
-          <DiCssdeck size={40} />
-          <Span>Portfolio</Span>
+          <Logo alt='MW_Logo' src='MW_Logo.svg' height={40} width={40} />
         </Link>
       </Div1>
       <Div2>
-        <li>
-          <Link href='#projects' passHref legacyBehavior>
+        {navSections.map((section) => (
+          <Link key={section.id} href={section.href} passHref legacyBehavior>
             <NavLink>
-              <span style={{ color: '#64ffda' }}>01.</span>Projects
+              <SpanText>{section.id}. </SpanText>
+              {section.title}
             </NavLink>
           </Link>
-        </li>
-        <li>
-          <Link href='#about' passHref legacyBehavior>
-            <NavLink>
-              <span style={{ color: '#64ffda' }}>02.</span>About
-            </NavLink>
-          </Link>
-        </li>
-        <li>
-          <Link href='#contatct' passHref legacyBehavior>
-            <NavLink>
-              <span style={{ color: '#64ffda' }}>03.</span>Contact
-            </NavLink>
-          </Link>
-        </li>
+        ))}
       </Div2>
-      {/* <Div3>
-      <SocialIcons href='https://github.com/MichaelSWong'>
-        <AiFillGithub size='3rem' />
-      </SocialIcons>
-      <SocialIcons href='https://instagram.com'>
-        <AiFillInstagram size='3rem' />
-      </SocialIcons>
-      <SocialIcons href='https://www.linkedin.com/in/michael-shane-wong'>
-        <AiFillLinkedin size='3rem' />
-      </SocialIcons>
-    </Div3> */}
       <Div4>
         {toggle ? (
           <div style={{ display: 'flex', flexDirection: 'column' }}>

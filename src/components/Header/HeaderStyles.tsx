@@ -20,10 +20,6 @@ export const Container = styled.div`
   }
 `;
 
-export const Span = styled.span`
-  font-size: 2rem;
-`;
-
 export const Div1 = styled.div`
   grid-area: 1 / 1 / 2 / 2;
   display: flex;
@@ -72,7 +68,7 @@ export const NavLink = styled.a`
   color: rgba(255, 255, 255, 0.75);
   transition: 0.4s ease;
   &:hover {
-    color: #64ffda;
+    color: #4dcbf1;
     opacity: 1;
     cursor: pointer;
   }
