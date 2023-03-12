@@ -17,11 +17,13 @@ export const Section = styled.section<ISectionProps>`
   box-sizing: content-box;
   position: relative;
   overflow: hidden;
-  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  /* grid-template-columns: 1fr 1fr; */
 
   @media ${(props) => props.theme.breakpoints.md} {
     padding: 24px 48px 0;
     flex-direction: column;
+    min-height: 0;
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
@@ -37,8 +39,8 @@ interface ISectionTitleProps {
 }
 export const SectionTitle = styled.h2<ISectionTitleProps>`
   font-weight: 800;
-  font-size: ${(props) => (props.main ? '56px' : '48px')};
-  line-height: ${(props) => (props.main ? '65px' : '56px')};
+  font-size: ${(props) => (props.main ? '80px' : '65px')};
+  line-height: ${(props) => (props.main ? '1.1' : '1.0')};
   width: max-content;
   max-width: 100%;
   background: linear-gradient(
@@ -50,13 +52,12 @@ export const SectionTitle = styled.h2<ISectionTitleProps>`
   background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 16px;
-  padding: ${(props) => (props.main ? '58px 0 16px' : '0')};
 
   @media ${(props) => props.theme.breakpoints.md} {
-    font-size: ${(props) => (props.theme.fonts.main ? '48px' : '36px')};
-    line-height: ${(props) => (props.theme.fonts.main ? '48px' : '36px')};
-    margin-bottom: 0px;
-    padding: ${(props) => (props.main ? '40px 0 12px' : '0')};
+    font-size: ${(props) => (props.theme.fonts.main ? '56px' : '48px')};
+    line-height: ${(props) => (props.theme.fonts.main ? '56px' : '48px')};
+    margin-bottom: 12px;
+    padding: ${(props) => (props.main ? '12px 0 12px' : '0')};
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
@@ -65,7 +66,6 @@ export const SectionTitle = styled.h2<ISectionTitleProps>`
     font-size: ${(props) => (props.theme.fonts.main ? '28px' : '32px')};
     line-height: ${(props) => (props.theme.fonts.main ? '32px' : '40px')};
     margin-bottom: 8px;
-    padding: ${(props) => (props.main ? '16px 0 8px' : '0')};
     max-width: 100%;
   }
 `;
@@ -336,12 +336,17 @@ export const LinkIconImg = styled.div<ILinkIconImgProps>`
 
 interface SpanTextProps {
   marginB?: boolean;
+  large?: boolean;
+  border?: boolean;
+  padding?: boolean;
 }
 
 export const SpanText = styled.span<SpanTextProps>`
   color: #4dcbf1;
-  font-size: 1.5rem;
+  font-size: ${(props) => (props.large ? '2.5rem' : '1.5rem')};
   margin-bottom: ${(props) => (props.marginB ? '16px' : '0')};
+  border: ${(props) => (props.border ? '1px solid #4dcbf1' : 0)};
+  padding: ${(props) => (props.padding ? '0.75rem 1rem' : 0)};
 
   @media ${(props) => props.theme.breakpoints.md} {
     margin-bottom: '0px';

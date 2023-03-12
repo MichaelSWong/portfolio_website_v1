@@ -12,16 +12,15 @@ export const Container = styled.div`
 `;
 
 export const Div1 = styled.div`
-  grid-area: 1 / 1 / 2 / 2;
   display: flex;
   flex-direction: row;
   align-content: center;
 `;
 
 export const Div2 = styled.div`
-  grid-area: 1 / 2 / 2 / 4;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-end;
+  gap: 25px;
   @media ${(props) => props.theme.breakpoints.md} {
     display: none;
   }

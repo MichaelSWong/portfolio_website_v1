@@ -25,14 +25,26 @@ const Header = () => {
         </Link>
       </Div1>
       <Div2>
-        {navSections.map((section) => (
-          <Link key={section.id} href={section.href} passHref legacyBehavior>
+        {navSections.map((section, index) => (
+          <Link
+            key={section.id + index}
+            href={section.href}
+            passHref
+            legacyBehavior
+          >
             <NavLink>
-              <SpanText>{section.id}. </SpanText>
+              <SpanText>{section.id} </SpanText>
               {section.title}
             </NavLink>
           </Link>
         ))}
+        <Link href='/resume.pdf'>
+          <NavLink>
+            <SpanText border padding>
+              Resume
+            </SpanText>
+          </NavLink>
+        </Link>
       </Div2>
       <Div3>
         {toggle ? (
@@ -43,16 +55,21 @@ const Header = () => {
               color='#4dcbf1'
             />
             <Div4>
-              {navSections.map((section) => (
+              {navSections.map((section, index) => (
                 <Link
-                  key={section.id}
+                  key={section.id + index}
                   href={section.href}
                   passHref
                   legacyBehavior
                 >
-                  <NavLink>{section.title}</NavLink>
+                  <NavLink onClick={() => setToggle((prev) => !prev)}>
+                    {section.title}
+                  </NavLink>
                 </Link>
               ))}
+              <SpanText border padding>
+                Resume
+              </SpanText>
             </Div4>
           </>
         ) : (

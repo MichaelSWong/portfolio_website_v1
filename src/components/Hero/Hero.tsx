@@ -12,12 +12,23 @@ import Button from '../../styles/GlobalComponents/Button';
 
 const Hero = () => (
   <Section minheight>
-    <SpanText marginB>Hi, I&apos;m</SpanText>
-    <SectionTitle>
+    <SpanText marginB large>
+      Hi, I&apos;m
+    </SpanText>
+    <SectionTitle main>
       Michael Wong. <br />I build and code things.
     </SectionTitle>
     <SectionText upper>Software Engineer, Full Stack Developer</SectionText>
-    <Button onClick={() => (window.location.href = 'https://google.com')}>
+    {/* <SectionText>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quia
+      provident odit aliquid minus repellat blanditiis. Minima dignissimos sed
+      libero, ipsam eum magni optio accusamus asperiores ut molestiae a ea.
+    </SectionText> */}
+    <Button
+      onClick={() =>
+        (window.location.href = 'mailto:wong.michael.shane@gmail.com')
+      }
+    >
       Get in touch
     </Button>
   </Section>
