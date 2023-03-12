@@ -340,7 +340,7 @@ interface SpanTextProps {
 
 export const SpanText = styled.span<SpanTextProps>`
   color: #4dcbf1;
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: ${(props) => (props.marginB ? '16px' : '0')};
 
   @media ${(props) => props.theme.breakpoints.md} {

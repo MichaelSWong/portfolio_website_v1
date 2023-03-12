@@ -1,13 +1,13 @@
 export const navSections = [
   {
     id: '00',
-    title: 'Experience',
-    href: '#experience',
+    title: 'About',
+    href: '#about',
   },
   {
     id: '01',
-    title: 'About',
-    href: '#about',
+    title: 'Experience',
+    href: '#experience',
   },
   {
     id: '02',
