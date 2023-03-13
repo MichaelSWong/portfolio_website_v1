@@ -12,6 +12,7 @@ export const Outlet = styled.div`
   display: flex;
   flex-grow: 1;
   justify-content: flex-start;
+  margin-top: 20px;
 `;
 
 interface ITabText {
