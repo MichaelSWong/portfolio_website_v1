@@ -21,7 +21,7 @@ const Experience = () => {
   return (
     <Section id='experience'>
       <SectionDivider />
-      <SectionTitle>Places I&apos;ve Worked</SectionTitle>
+      <SectionTitle main>Places I&apos;ve Worked</SectionTitle>
       <GridContainer>
         <UlNav>
           <TabNavItem
@@ -46,7 +46,7 @@ const Experience = () => {
             <ResumeDiv>
               <VscDebugBreakpointLog size={29.95} color='#4dcbf1' />
               <TabText>
-                Write modern and maintable code for a variety of internal
+                Write modern and maintainable code for a variety of internal
                 projects
               </TabText>
             </ResumeDiv>
@@ -61,7 +61,7 @@ const Experience = () => {
             <ResumeDiv>
               <VscDebugBreakpointLog size={36.75} color='#4dcbf1' />
               <TabText>
-                Build resuable components in our UI library to save 100+ hours
+                Build reusable components in our UI library to save 100+ hours
                 of development per month
               </TabText>
             </ResumeDiv>

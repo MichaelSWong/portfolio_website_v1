@@ -37,7 +37,7 @@ const Header = () => {
             Experience
           </NavLink>
         </Link>
-        <Link href='#Projects' passHref legacyBehavior>
+        <Link href='#projects' passHref legacyBehavior>
           <NavLink>
             <SpanText>02. </SpanText>
             Projects
@@ -66,19 +66,30 @@ const Header = () => {
             />
             <Div4>
               <Link href='#about' passHref legacyBehavior>
-                <NavLink>About</NavLink>
+                <NavLink onClick={() => setToggle((prev) => !prev)}>
+                  About
+                </NavLink>
               </Link>
               <Link href='#experience' passHref legacyBehavior>
-                <NavLink>Experience</NavLink>
+                <NavLink onClick={() => setToggle((prev) => !prev)}>
+                  Experience
+                </NavLink>
               </Link>
-              <Link href='#Projects' passHref legacyBehavior>
-                <NavLink>Projects</NavLink>
+              <Link href='#projects' passHref legacyBehavior>
+                <NavLink onClick={() => setToggle((prev) => !prev)}>
+                  Projects
+                </NavLink>
               </Link>
               <Link href='#contact' passHref legacyBehavior>
-                <NavLink>Contact</NavLink>
+                <NavLink onClick={() => setToggle((prev) => !prev)}>
+                  Contact
+                </NavLink>
               </Link>
 
-              <NavLink href='/resume.pdf'>
+              <NavLink
+                onClick={() => setToggle((prev) => !prev)}
+                href='/resume.pdf'
+              >
                 <SpanText border padding>
                   Resume
                 </SpanText>
