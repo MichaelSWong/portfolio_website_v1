@@ -25,26 +25,36 @@ const Header = () => {
         </Link>
       </Div1>
       <Div2>
-        {navSections.map((section, index) => (
-          <Link
-            key={section.id + index}
-            href={section.href}
-            passHref
-            legacyBehavior
-          >
-            <NavLink>
-              <SpanText>{section.id} </SpanText>
-              {section.title}
-            </NavLink>
-          </Link>
-        ))}
-        <Link href='/resume.pdf'>
+        <Link href='#about' passHref legacyBehavior>
           <NavLink>
-            <SpanText border padding>
-              Resume
-            </SpanText>
+            <SpanText>00. </SpanText>
+            About
           </NavLink>
         </Link>
+        <Link href='#experience' passHref legacyBehavior>
+          <NavLink>
+            <SpanText>01. </SpanText>
+            Experience
+          </NavLink>
+        </Link>
+        <Link href='#Projects' passHref legacyBehavior>
+          <NavLink>
+            <SpanText>02. </SpanText>
+            Projects
+          </NavLink>
+        </Link>
+        <Link href='#contact' passHref legacyBehavior>
+          <NavLink>
+            <SpanText>03. </SpanText>
+            Contact
+          </NavLink>
+        </Link>
+
+        <NavLink href='/resume.pdf'>
+          <SpanText border padding>
+            Resume
+          </SpanText>
+        </NavLink>
       </Div2>
       <Div3>
         {toggle ? (
@@ -55,21 +65,24 @@ const Header = () => {
               color='#4dcbf1'
             />
             <Div4>
-              {navSections.map((section, index) => (
-                <Link
-                  key={section.id + index}
-                  href={section.href}
-                  passHref
-                  legacyBehavior
-                >
-                  <NavLink onClick={() => setToggle((prev) => !prev)}>
-                    {section.title}
-                  </NavLink>
-                </Link>
-              ))}
-              <SpanText border padding>
-                Resume
-              </SpanText>
+              <Link href='#about' passHref legacyBehavior>
+                <NavLink>About</NavLink>
+              </Link>
+              <Link href='#experience' passHref legacyBehavior>
+                <NavLink>Experience</NavLink>
+              </Link>
+              <Link href='#Projects' passHref legacyBehavior>
+                <NavLink>Projects</NavLink>
+              </Link>
+              <Link href='#contact' passHref legacyBehavior>
+                <NavLink>Contact</NavLink>
+              </Link>
+
+              <NavLink href='/resume.pdf'>
+                <SpanText border padding>
+                  Resume
+                </SpanText>
+              </NavLink>
             </Div4>
           </>
         ) : (
