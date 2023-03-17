@@ -35,7 +35,7 @@ export const projects = [
   {
     title: 'Hoobank',
     description:
-      'Using React, TypeScript, Tailwind built an App called Hoobank.',
+      'Using React, TypeScript, Tailwind, built an App called Hoobank. A cool website where you can see the future of banking.',
     image: 'Bank.png',
     tags: ['React', 'TypeScript', 'Tailwind', 'Vite'],
     source: 'https://github.com/MichaelSWong/bank_modern_app',
