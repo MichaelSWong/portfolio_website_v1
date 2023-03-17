@@ -33,13 +33,13 @@ export const projects = [
     id: 0,
   },
   {
-    title: 'DevConnector',
+    title: 'Hoobank',
     description:
-      'Using React, Node.js, Express, MongoDB, TypeScript, built an App called DevConnector. Where developers can sign up and send messages',
+      'Using React, TypeScript, Tailwind built an App called Hoobank.',
     image: 'DevConnector.png',
-    tags: ['Mongo', 'Express', 'React', 'Node', 'TypeScript'],
-    source: 'https://github.com/MichaelSWong/devconnector',
-    visit: 'https://github.com/MichaelSWong/devconnector',
+    tags: ['React', 'TypeScript', 'Tailwind', 'Vite'],
+    source: 'https://github.com/MichaelSWong/bank_modern_app',
+    visit: 'https://bank.michaelswong.com/',
     id: 1,
   },
   {
@@ -48,7 +48,7 @@ export const projects = [
     image: 'Restaurant.png',
     tags: ['React', 'TypeScript', 'Vite'],
     source: 'https://github.com/MichaelSWong/gerich-restaurant',
-    visit: 'https://github.com/MichaelSWong/gerich-restaurant',
+    visit: 'https://restaurant.michaelswong.com/',
     id: 2,
   },
   {
