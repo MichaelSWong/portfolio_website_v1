@@ -1,57 +1,94 @@
-import React, { useState } from 'react';
-import { VscDebugBreakpointLog } from 'react-icons/vsc';
+import React, { useState } from "react";
+import { VscDebugBreakpointLog } from "react-icons/vsc";
 import {
   Section,
   SectionDivider,
   SectionText,
   SectionTitle,
-} from '@/styles/GlobalComponents';
+} from "@/styles/GlobalComponents";
 import {
   GridContainer,
   Outlet,
   ResumeDiv,
   TabText,
   UlNav,
-} from './ExperienceStyles';
-import TabNavItem from '../Tabs/TabNavItem';
-import TabContent from '../Tabs/TabContent';
+} from "./ExperienceStyles";
+import TabNavItem from "../Tabs/TabNavItem";
+import TabContent from "../Tabs/TabContent";
 
 const Experience = () => {
-  const [activeTab, setActiveTab] = useState('fnb');
+  const [activeTab, setActiveTab] = useState("fnb");
   return (
-    <Section id='experience'>
+    <Section id="experience">
       <SectionDivider />
       <SectionTitle main>Places I&apos;ve Worked</SectionTitle>
       <GridContainer>
         <UlNav>
           <TabNavItem
-            title='F.N.B. Corp'
-            id='fnb'
+            title="Web Dev Logics"
+            id="wdl"
             activeTab={activeTab}
             setActiveTab={setActiveTab}
           />
           <TabNavItem
-            title='Interac'
-            id='interac'
+            title="F.N.B. Corp"
+            id="fnb"
+            activeTab={activeTab}
+            setActiveTab={setActiveTab}
+          />
+          <TabNavItem
+            title="Interac"
+            id="interac"
             activeTab={activeTab}
             setActiveTab={setActiveTab}
           />
         </UlNav>
         <Outlet>
-          <TabContent id='fnb' activeTab={activeTab}>
+          <TabContent id="wdl" activeTab={activeTab}>
+            <TabText large colorAlt>
+              Senior Front End Engineer
+            </TabText>
+            <TabText>July 2023 - Present</TabText>
+            <ResumeDiv>
+              <VscDebugBreakpointLog size={55} color="#4dcbf1" />
+              <TabText>
+                Design and develop mobile-first user-friendly websites, using
+                Figma, Astro JS, Solid JS and on page SEO to increase Google
+                rankings.
+              </TabText>
+            </ResumeDiv>
+            <ResumeDiv>
+              <VscDebugBreakpointLog size={75} color="#4dcbf1" />
+              <TabText>
+                Create websites that score 100% across all metrics on PageSpeed
+                Insights and GTMetric. Led the English Speaking Club, acting as
+                a cultural ambassador to junior high school students.
+              </TabText>
+            </ResumeDiv>
+            <ResumeDiv>
+              <VscDebugBreakpointLog size={70} color="#4dcbf1" />
+              <TabText>
+                Implemented content management and security resource tutorials
+                to assist end-user training. Modeled lessons to new teachers and
+                utilized classroom management skills
+              </TabText>
+            </ResumeDiv>
+          </TabContent>
+
+          <TabContent id="fnb" activeTab={activeTab}>
             <TabText large colorAlt>
               Application Developer II
             </TabText>
             <TabText>March 2018 - Present</TabText>
             <ResumeDiv>
-              <VscDebugBreakpointLog size={29.95} color='#4dcbf1' />
+              <VscDebugBreakpointLog size={29.95} color="#4dcbf1" />
               <TabText>
                 Write modern and maintainable code for a variety of internal
                 projects
               </TabText>
             </ResumeDiv>
             <ResumeDiv>
-              <VscDebugBreakpointLog size={68} color='#4dcbf1' />
+              <VscDebugBreakpointLog size={68} color="#4dcbf1" />
               <TabText>
                 Engineer modern applications with a variety of different
                 languages and frameworks such as JavaScript, TypeScript, React,
@@ -59,27 +96,27 @@ const Experience = () => {
               </TabText>
             </ResumeDiv>
             <ResumeDiv>
-              <VscDebugBreakpointLog size={36.75} color='#4dcbf1' />
+              <VscDebugBreakpointLog size={36.75} color="#4dcbf1" />
               <TabText>
                 Build reusable components in our UI library to save 100+ hours
                 of development per month
               </TabText>
             </ResumeDiv>
             <ResumeDiv>
-              <VscDebugBreakpointLog size={42.25} color='#4dcbf1' />
+              <VscDebugBreakpointLog size={42.25} color="#4dcbf1" />
               <TabText>
                 Document all supported systems and applications to effectively
                 train new and existing team members
               </TabText>
             </ResumeDiv>
           </TabContent>
-          <TabContent id='interac' activeTab={activeTab}>
+          <TabContent id="interac" activeTab={activeTab}>
             <TabText large colorAlt>
               Assistant Language Teacher
             </TabText>
             <TabText>August 2004 - March 2018</TabText>
             <ResumeDiv>
-              <VscDebugBreakpointLog size={72.25} color='#4dcbf1' />
+              <VscDebugBreakpointLog size={72.25} color="#4dcbf1" />
               <TabText>
                 Strengthened planning and organizational skills by teaching
                 English to 15,000+ students with 200 different teachers at 25
@@ -87,14 +124,14 @@ const Experience = () => {
               </TabText>
             </ResumeDiv>
             <ResumeDiv>
-              <VscDebugBreakpointLog size={38.72} color='#4dcbf1' />
+              <VscDebugBreakpointLog size={38.72} color="#4dcbf1" />
               <TabText>
                 Led the English Speaking Club, acting as a cultural ambassador
                 to junior high school students.
               </TabText>
             </ResumeDiv>
             <ResumeDiv>
-              <VscDebugBreakpointLog size={31.12} color='#4dcbf1' />
+              <VscDebugBreakpointLog size={31.12} color="#4dcbf1" />
               <TabText>
                 Modeled lessons to new teachers and utilized classroom
                 management skills
